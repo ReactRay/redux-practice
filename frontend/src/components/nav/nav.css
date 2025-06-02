@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+
+
+nav {
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+
+    li {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
