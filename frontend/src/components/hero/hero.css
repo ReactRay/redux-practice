@@ -1,14 +1,30 @@
 .hero {
+    height: 90dvh;
+    display: flex;
+    width: 300dvw;
 
-    background-color: #e0d8d8;
-    height: 100dvh;
 
     .content {
-        border: 1px solid red;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 4rem 0;
+        padding: 2rem 4rem;
+    }
+
+    .c1 {
+        flex: 1;
+        background-color: var(--color-two);
+        color: var(--color-gray);
+        width: 100dvw;
+    }
+
+
+    .c2 {
+        background-color: var(--color-one);
+        color: var(--color-black);
+        width: 100dvw;
+    }
+
+    .c3 {
+        background-color: var(--color-three);
+        color: var(--color-blacky);
+        width: 100dvw;
     }
 }

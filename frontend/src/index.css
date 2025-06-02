@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +10,30 @@
 
 html,
 body {
-  font-family: 'Courier New', Courier, monospace;
-
+  font-family: 'jura', sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  scroll-behavior: smooth;
 
 }
 
 .container {
   padding: 0 4rem;
+}
+
+:root {
+
+  --color-one: #7dbf9e;
+  --color-two: #537a69;
+  --color-three: #61b3b0;
+  --color-black: #434141;
+  --color-white: #e7e7e7;
+  --color-gray: #c9c9c9;
+
+}
+
+
+
+body::-webkit-scrollbar {
+  display: none;
 }
