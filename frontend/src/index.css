@@ -22,12 +22,12 @@ body {
 }
 
 :root {
-
+  --color-bg: #2f2d2d;
   --color-one: #7dbf9e;
   --color-two: #537a69;
   --color-three: #61b3b0;
   --color-black: #434141;
-  --color-white: #e7e7e7;
+  --color-white: #c9c6c6;
   --color-gray: #c9c9c9;
 
 }

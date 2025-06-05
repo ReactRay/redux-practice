@@ -3,27 +3,24 @@
     display: flex;
     width: 300dvw;
 
-
     .content {
         padding: 2rem 4rem;
     }
 
     .c1 {
         flex: 1;
-        background-color: var(--color-two);
         color: var(--color-gray);
         width: 100dvw;
+        background-color: var(--color-bg);
     }
 
 
     .c2 {
-        background-color: var(--color-one);
         color: var(--color-black);
         width: 100dvw;
     }
 
     .c3 {
-        background-color: var(--color-three);
         color: var(--color-blacky);
         width: 100dvw;
     }
