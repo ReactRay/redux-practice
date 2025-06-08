@@ -11,7 +11,9 @@
         flex: 1;
         color: var(--color-gray);
         width: 100dvw;
-        background-color: var(--color-bg);
+        display: flex;
+        background-color: var(--color-gray);
+
     }
 
 

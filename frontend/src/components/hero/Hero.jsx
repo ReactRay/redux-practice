@@ -1,11 +1,13 @@
 import './hero.css'
 import TodoForm from '../form/TodoForm'
+import TodoList from '../todo-showcase/TodoList'
 
 function Hero() {
     return (
         <div className="contaienr hero">
             <div className='content c1' id='home'>
                 <TodoForm />
+                <TodoList />
             </div>
             <div className='content c2' id='form'>
 

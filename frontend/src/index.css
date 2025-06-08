@@ -22,17 +22,29 @@ body {
 }
 
 :root {
-  --color-bg: #2f2d2d;
+  --color-bg: #969393;
   --color-one: #7dbf9e;
   --color-two: #537a69;
   --color-three: #61b3b0;
   --color-black: #434141;
-  --color-white: #c9c6c6;
-  --color-gray: #c9c9c9;
+  --color-white: #c9c9c9;
+  --color-gray: #dbd9d9;
 
 }
 
+.btn {
+  background-color: var(--color-one);
+  padding: .5rem 1rem;
+  border-radius: .4rem;
+  border: none;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
 
+.btn:hover {
+  background-color: var(--color-two);
+  color: var(--color-white)
+}
 
 body::-webkit-scrollbar {
   display: none;

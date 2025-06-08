@@ -1,8 +1,8 @@
-
+import './todo-showcase.css';
 
 function TodoList() {
     return (
-        <div>
+        <div className="todo-list">
             list
         </div>
     )
