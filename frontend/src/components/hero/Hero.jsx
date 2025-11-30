@@ -2,7 +2,7 @@ import './hero.css'
 import TodoForm from '../form/TodoForm'
 import TodoList from '../todo-showcase/TodoList'
 
-
+//this project is for learning purpose only
 function Hero() {
     return (
         <div className="contaienr hero">
