@@ -3,6 +3,7 @@ import './nav.css';
 function Nav({ setOpenModal }) {
     return (
 
+        //improve upon this later 
         <nav className='nav '>
             <ul>
                 <li><a href="#home">home</a></li>
