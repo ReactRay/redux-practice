@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import './index.css'
+import Register from "./pages/auth/Register"
 function App() {
 
 
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <>
-      <h1>okay</h1>
+      <Register />
 
     </>
   )
