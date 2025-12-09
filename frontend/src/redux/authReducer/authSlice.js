@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { registerThunk, loginThunk } from './authThunks.js'
 
 const initialState = {
   user: null,
@@ -17,7 +18,6 @@ const authSlice = createSlice({
       state.user = null
       state.token = null
       state.isAuthenticated = false
-
       localStorage.removeItem('token')
       localStorage.removeItem('user')
     },
@@ -31,6 +31,34 @@ const authSlice = createSlice({
         state.isAuthenticated = true
       }
     },
+  },
+
+  extraReducers: (builder) => {
+    //register cases
+    builder.addCase(registerThunk.fulfilled, (state, { payload }) => {
+      state.user = payload.user
+      state.token = payload.token
+      state.isAuthenticated = true
+      localStorage.setItem('token', payload.token)
+      localStorage.setItem('user', JSON.stringify(payload.user))
+    })
+
+    builder.addCase(loginThunk.rejected, (state, action) => {
+      state.error = action.error.message
+    })
+
+    //login cases
+    builder.addCase(loginThunk.fulfilled, (state, { payload }) => {
+      state.user = payload.user
+      state.token = payload.token
+      state.isAuthenticated = true
+      localStorage.setItem('token', payload.token)
+      localStorage.setItem('user', JSON.stringify(payload.user))
+    })
+
+    builder.addCase(loginThunk.rejected, (state, action) => {
+      state.error = action.error.message
+    })
   },
 })
 
