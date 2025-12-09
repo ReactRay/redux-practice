@@ -8,8 +8,8 @@ function Navbar() {
         <nav>
             <h2>Navbar</h2>
             <ul>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/register">Register</NavLink>
+
+                <NavLink to="/">Register</NavLink>
             </ul>
         </nav>
     )

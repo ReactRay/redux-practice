@@ -1,0 +1,37 @@
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+input {
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    outline: none;
+    background-color: #ffffff45;
+
+}
+
+select {
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    outline: none;
+    background-color: #ffffff45;
+}
+
+option {
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+
+}

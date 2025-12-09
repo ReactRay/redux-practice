@@ -29,7 +29,6 @@ body {
   --color-black: #434141;
   --color-white: #c9c9c9;
   --color-gray: #dbd9d9;
-
 }
 
 .btn {
@@ -42,8 +41,7 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--color-two);
-  color: var(--color-white)
+  filter: brightness(70%);
 }
 
 body::-webkit-scrollbar {
