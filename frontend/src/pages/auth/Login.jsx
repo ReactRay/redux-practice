@@ -1,20 +1,32 @@
-
-
+import { Link } from 'react-router-dom'
 import './auth.css'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { registerThunk } from '../../redux/authReducer/authThunks'
-import { Link } from 'react-router-dom'
+import { loginThunk } from '../../redux/authReducer/authThunks'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
-function Register() {
+function Login() {
 
     const dispatch = useDispatch()
-
+    const navigate = useNavigate()
     const [formState, setFormState] = useState({
         email: '',
-        password: '',
-        role: 'poster'
+        password: ''
     })
+
+    const { user } = useSelector(state => state.auth);
+
+
+    async function handleSubmit(e) {
+        e.preventDefault()
+        await dispatch(loginThunk(formState));
+
+
+        navigate('/home');
+
+
+    }
 
     function handleChange(e) {
         const { name, value } = e.target
@@ -23,17 +35,11 @@ function Register() {
             [name]: value
         }))
     }
-
-    async function handleSubmit(e) {
-        e.preventDefault()
-        await dispatch(registerThunk(formState));
-    }
-
     return (
-        <div className='page-container'>
+        <div>
 
             <form className='auth-form' onSubmit={handleSubmit} >
-                <h1>Register Page</h1>
+                <h1>Login Page</h1>
                 <div className='form-control'>
                     <label htmlFor='Email'>Email:</label>
                     <input onChange={handleChange} value={formState.email} type="email" name='email' id='email' />
@@ -42,19 +48,13 @@ function Register() {
                     <label htmlFor='password'>Password:</label>
                     <input onChange={handleChange} value={formState.password} type="password" name='password' id='password' />
                 </div>
-                <div className='form-control'>
-                    <select onChange={handleChange} value={formState.role} name='role' id='role'>
-                        <option value="poster">Poster</option>
-                        <option value="commenter">Commenter</option>
-                    </select>
-                </div>
 
-                <button type='submit' className='btn btn-primary btn-block'>Register</button>
-                <Link to="/login">Already have an account? Login</Link>
+
+                <button type='submit' className='btn btn-primary btn-block'>Login</button>
+                <Link to="/">no account ? register!</Link>
             </form>
-
         </div>
     )
 }
 
-export default Register
+export default Login

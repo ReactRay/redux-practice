@@ -7,6 +7,7 @@ export const registerThunk = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const response = await registerUser(userData)
+      console.log(response.data)
       return response.data
     } catch (error) {
       return rejectWithValue(error.response.data)

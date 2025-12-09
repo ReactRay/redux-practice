@@ -43,7 +43,7 @@ const authSlice = createSlice({
       localStorage.setItem('user', JSON.stringify(payload.user))
     })
 
-    builder.addCase(loginThunk.rejected, (state, action) => {
+    builder.addCase(registerThunk.rejected, (state, action) => {
       state.error = action.error.message
     })
 
