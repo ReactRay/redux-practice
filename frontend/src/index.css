@@ -49,3 +49,7 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.page-container {
+  padding: 2rem 2rem;
+}
